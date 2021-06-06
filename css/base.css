@@ -1,0 +1,39 @@
+/* webapp的cssReset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 我们在body中设置了基础属性，但是类似于a，或者input这样的标签是不会继承于body中基础属性的 */
+body {
+    font-size: 12px;
+    background-color: #fff;
+}
+
+a {
+    font-size: 12px;
+    /* background-color: #686868; */
+    /* 为什么要给a标签设置一个颜色啊？ */
+    text-decoration: none;
+    /* 将a标签中每次点击的时候都会显示阴影出现，取消显示阴影 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    background-color: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    /* 取消img标签中下面的缝隙  */
+    vertical-align: top;
+    border: none;
+    width: 100%;
+}

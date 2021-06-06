@@ -1,0 +1,247 @@
+/* 布局start */
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* header */
+.header-container {
+    top: 0;
+    background-color: #eb4030;
+}
+
+
+.header-container,
+.tabbar-container {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    z-index: 99999;
+}
+
+/* tabbar */
+.tabbar-container {
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(154, 141, 141, 0.6);
+
+}
+
+.tabbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.tabbar-item {
+    height: 100%;
+}
+
+.tabbar-link {
+    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabbar-link .iconfont {
+    font-size: 1rem;
+
+}
+
+.tabbar-item-active .tabbar-link {
+    color: red;
+}
+
+
+
+
+
+/* main-container */
+.main-container {
+    padding: 2.5rem 0;
+    padding-bottom: 0;
+    background-color: #fff;
+}
+
+.nav-container {
+    background-color: #f5f5f5;
+    margin-bottom: 0.5rem;
+}
+
+/* 布局end */
+
+/* 组件start */
+
+/* navbar */
+.navbar {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-left,
+.nav-right {
+    width: 3rem;
+
+}
+
+.nav-center>.searchBox {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: #ffffff;
+}
+
+
+.searchBox-prepend,
+.search-append,
+.search-input {
+    height: 100%;
+}
+
+.searchBox-prepend,
+.search-append {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.6rem;
+}
+
+.search-input {
+    flex: 1;
+
+}
+
+
+/* nav */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.8rem 0 0.4rem;
+}
+
+.nav-item {
+    width: 20%;
+    margin-bottom: 0.4rem;
+}
+
+.nav-link {
+    display: block;
+    text-align: center;
+}
+
+.nav-img {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-bottom: 0.2rem;
+}
+
+.nav-text {
+    display: block;
+}
+
+
+
+
+
+/* 组件end */
+
+/* 内容start */
+
+/* recommend */
+.recommend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recommend-item {
+    width: 49.3333%;
+    background-color: #fff;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.12);
+    margin-bottom: 0.3rem;
+}
+
+.recommend-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.recommend-pic {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.recommend-img {
+    width: 100%;
+    height: 9.25rem;
+}
+
+.recommend-name,
+.recommend-info,
+.recommend-origPrice {
+    padding: 0 0.25rem;
+    margin-bottom: 0.4rem;
+}
+
+/* ! 这个地方很巧妙，先开始我一直在纳闷，这个地方怎么写才能统一位置，这个老师直接就是将文本写在一行中，超出的部分直接溢出隐藏了，然后使用省略号进行标记即可，这个是一个很好的办法 */
+.recommend-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.recommend-origPrice {
+    color: #ccc;
+}
+
+.recommend-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recommend-price {
+    font-size: 1rem;
+    color: red;
+}
+
+.recommend-count {
+    color: #999;
+}
+
+
+/* 适应不同的dpr的写法，字体不断变化 */
+.recommend-price-num {
+    font-size: 20px;
+}
+
+[data-dpr="2"].recommend-price-num {
+    font-size: 40px;
+}
+
+[data-dpr="3"].recommend-price-num {
+    font-size: 36px;
+}
+
+/* 内容end */
